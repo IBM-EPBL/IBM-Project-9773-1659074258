@@ -1,0 +1,76 @@
+int a1=2;
+int b1=3;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(a1,OUTPUT);
+  pinMode(b1,INPUT);
+  pinMode(12,OUTPUT);
+}
+
+void loop()
+{
+  //ultrasonic sensor
+  digitalWrite(a1,LOW);
+  digitalWrite(a1,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(a1,LOW);
+  float dur=pulseIn(b1,HIGH);
+  float dis=(dur*0.0343)/2;
+  Serial.print("Distance is: ");
+  Serial.println(dis);
+  
+    //LED ON
+  if(dis>=100)
+  {
+    digitalWrite(8,HIGH);
+    digitalWrite(7,HIGH);
+  }
+  
+  //Buzzer For ultrasonic Sensor
+  if(dis>=100)
+  {
+  for(int i1=0; i1<=30000; i1=i1+10)
+  {
+  tone(12,i1);
+  delay(1000);
+  noTone(12);
+  delay(1000);
+  }
+  }
+  
+    //Temperate Sensor
+  double a= analogRead(A0);
+  double temp=(((a/1024)*5)-0.5)*100;
+  Serial.print("Temp Value: ");
+  Serial.println(temp);
+  delay(1000);
+  
+  
+  //LED ON
+  if(temp>=100)
+  {
+    digitalWrite(8,HIGH);
+    digitalWrite(7,HIGH);
+  }
+  
+  //Buzzer for Temperature Sensor
+  if(temp>=100)
+  {
+  for(int i2=0; i2<=30000; i2=i2+10)
+  {
+  tone(12,i2);
+  delay(1000);
+  noTone(12);
+  delay(1000);
+  }
+  }
+
+   //LED OFF
+  if(temp<100)
+  {
+    digitalWrite(8,LOW);
+    digitalWrite(7,LOW);
+  }
+}
