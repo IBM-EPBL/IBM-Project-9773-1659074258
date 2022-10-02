@@ -11,7 +11,7 @@ def index():
 def Register():
      if request.method=="POST":
          name=request.form.get('name')
-         phno=request.form.get('age')
+         age=request.form.get('age')
          mail=request.form.get('mail')
          qual=request.form.get('qual')
          return render_template("result.html",name=name,age=age,mail=mail,qual=qual )
