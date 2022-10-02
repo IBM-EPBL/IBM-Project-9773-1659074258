@@ -11,10 +11,10 @@ def index():
 def Register():
      if request.method=="POST":
          name=request.form.get('name')
-         phno=request.form.get('phno')
+         phno=request.form.get('age')
          mail=request.form.get('mail')
          qual=request.form.get('qual')
-         return render_template("result.html",name=name,phno=phno,mail=mail,qual=qual )
+         return render_template("result.html",name=name,age=age,mail=mail,qual=qual )
 
 if __name__=='__main__':
     app.run(debug=True)   
