@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="refresh" content="30">
+    <title>Registration form</title>
+    <style>
+        form{
+            text-align: center;
+            width: 100%;
+            display: inline-block;
+        }
+        body{
+            
+            background-color: rgba(127, 255, 246, 0.681);
+            font-family: sans-serif;
+            text-align:start;
+            font-size: large;
+    
+        }
+    </style>
+</head>
+<body>
+    <form action="/Register" method="POST">
+        <strong>
+                <h2>Registration Form</h2>
+                Name : <input type="text" name="name" id="name" required><br><br>
+                Phone : <input type="tel" name="phno" id="phno"><br><br>
+                Qualification: <select name="qual" id="qual">
+                    <option value="High School">High School</option>
+                    <option value="Diplomo">Diplamo</option>
+                    <option value="Under Graduate">Under Graduate</option>
+                    <option value="Post Graduate">Post Graduate</option>
+                </select><br><br>
+                E-mail : <input type="email" name="mail" id="mail" required><br><br>
+                <input type="submit" value="Register" onclick="submitForm()">
+                <input type="reset" value="Reset">
+            </strong>
+    </form>
+    
+</body>
+</html>
