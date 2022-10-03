@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="refresh" content="30">
     <title>Registration form</title>
+    
     <style>
+        
         form{
             text-align: center;
             width: 100%;
@@ -21,13 +23,16 @@
     
         }
     </style>
+    
 </head>
+    
 <body>
+    
     <form action="/Register" method="POST">
         <strong>
                 <h2>Registration Form</h2>
                 Name : <input type="text" name="name" id="name" required><br><br>
-                Age : <input type="number" name="age" id="age"><br><br>
+                Age : <input type="number" name="age" id="age" required><br><br>
                 Qualification: <select name="qual" id="qual">
                     <option value="High School">High School</option>
                     <option value="Diplomo">Diplamo</option>
@@ -35,7 +40,7 @@
                     <option value="Post Graduate">Post Graduate</option>
                 </select><br><br>
                 E-mail : <input type="email" name="mail" id="mail" required><br><br>
-                <input type="submit" value="Register" onclick="submitForm()">
+                <input type="submit" value="Register">
                 <input type="reset" value="Reset">
             </strong>
     </form>
