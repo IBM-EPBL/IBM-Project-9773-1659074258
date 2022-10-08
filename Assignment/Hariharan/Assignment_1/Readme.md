@@ -2,6 +2,7 @@ In This Assignment the data collected from the user will be displayed in other p
 
 Collected data:
 
-  Name, Phone Number, Qualification, Email.
+  Name, Phone Number, Qualification, Email , Phone Number
+ .
 
 Flask was used for Server side.
