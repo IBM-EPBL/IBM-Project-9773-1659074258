@@ -1,6 +1,6 @@
 from flask import render_template,Flask,request
-app=Flask(__name__)
 
+app=Flask(__name__)
 @app.route("/")
 
 def index():
@@ -14,7 +14,8 @@ def Register():
          age=request.form.get('age')
          mail=request.form.get('mail')
          qual=request.form.get('qual')
-         return render_template("result.html",name=name,age=age,mail=mail,qual=qual )
+         phno=request.form.get('phno')
+         return render_template("result.html",name=name,age=age,mail=mail,qual=qual,phno=phno )
 
 if __name__=='__main__':
-    app.run(debug=False)   
+    app.run(debug=True)   
