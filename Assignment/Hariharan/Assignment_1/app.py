@@ -14,7 +14,10 @@ def Register():
          age=request.form.get('age')
          mail=request.form.get('mail')
          qual=request.form.get('qual')
-         return render_template("result.html",name=name,age=age,mail=mail,qual=qual )
+         phno=request.form.get('phno')
+         return render_template("result.html",name=name,age=age,mail=mail,qual=qual,phno=phno )
 
 if __name__=='__main__':
     app.run(debug=True)   
+
+
