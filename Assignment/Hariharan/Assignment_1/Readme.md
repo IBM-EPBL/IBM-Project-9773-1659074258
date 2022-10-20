@@ -8,6 +8,8 @@ Collected data:
 
 Flask was used for Server side.
 app.py was used for this 
+
+
 2.
 In this Assignment any 5 moduels are required to be implemented within the flask app
   The Used Modules
