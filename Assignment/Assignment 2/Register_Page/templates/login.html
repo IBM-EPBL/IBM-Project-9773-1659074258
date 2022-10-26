@@ -1,1 +1,50 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Page</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .form{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background-color: aquamarine;
+            padding: 10px;
+            margin-left:max(200px,40%);
+            width: 300px;
+            margin-top: 100px;
+            text-align: center;
+            border-radius: 20px;
+        }
+        input{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h3>Login</h3>
+         
+        <form action="/login" method="post">
+            <label for="UName">Name :</label>
+            <input type="text" name="UName" id="UName"><br><br>
+            <label for="UPass">Password :</label>
+            <input type="text" name="UPass" id="UPass"><br><br>
+            <input type="submit" value="Login" style="float: left; margin-left: 20px;">
+            <input type="reset" value="Cancel" style=" float: right;margin-right: 20px;">
+        </form>
+            <p class="bottom">Don't have an account?  <a class="bottom" href="register.html"> Sign Up here</a></p>
+    </div>
+    <div class="msg" style="text-align:center;">
+        <br>
+        {{Msg}}
+    </div>    
+</body>
+</html>
