@@ -1,6 +1,6 @@
 # Containment Zone Altering Application
 
-Name:Covidsafe - be secure
+Name: Covidsafe -"be secure"
 
 Category: Cloud App Development 
 
