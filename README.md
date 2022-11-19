@@ -1,8 +1,8 @@
 # Containment Zone Altering Application
 
+Name:Covidsafe - be secure
 
-
-Category: Cloud App Development
+Category: Cloud App Development 
 
 Technology Used :
   IBM Cloud,HTML,Javascript,IBM Cloud Object Storage,Python-Flask,Kubernetes,Docker,IBM DB2,IBM Container Registry
