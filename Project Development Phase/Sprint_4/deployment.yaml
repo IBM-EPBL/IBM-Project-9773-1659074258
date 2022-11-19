@@ -1,0 +1,20 @@
+ apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: covidsafe-deployment
+ spec:
+   replicas: 1
+   selector:
+     matchLabels:
+       app: covidsafe
+   template:
+     metadata:
+       labels:
+         app: covidsafe
+     spec:
+       containers:
+       - name: covidsafe-app
+         image: icr.io/sample_1309/containment_zone_alert
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 8080
